@@ -1,0 +1,133 @@
+mixin header
+	header.header
+		.section_in
+			.header_in
+				a.header_logo_w(href="#")
+					.header_logo
+						img.header_logo_img(height="120" width="150" src="i/logo.png")
+						span дети наше будущее
+
+				.header_main
+					.header_main_top
+						.header_tels_w
+							.header_tels_main
+								+icon('telephone','header_tels_icon')
+								.header_tels_content 093 000 00 00
+								+icon('angle-right','header_tels_icon')
+								ul.tels_all.header_tels
+									li.tels_item: a(class="tels_item_link" href="tel:0800000000") 0 800 00 00 00
+									li.tels_item: a(class="tels_item_link" href="tel:0440000000") 044 000 00 00
+									li.tels_item: a(class="tels_item_link" href="tel:0930000000") 093 000 00 00
+						.header_search
+							.search_form
+								form
+									input.search_form_inp(type="search" placeholder="Что вы хотите найти?")
+									button.search_form_btn(type="submit") 
+										+icon('search','search_btn_icon')
+						.header_enter_w
+							.header_enter
+								+icon('login','header_enter_icon')
+								.header_enter_bts
+									button.header_login Вход
+									button.header_register Регистрация
+
+						.header_lang
+							.lang_select Ru
+								+icon('angle-right','lang_icon')
+								.lang_select_inner
+									- var lang = ["Ru", "En", "Ua"]
+										each item in lang
+											.lang_select_item= item
+					.header_main_bottom
+						.header_menu
+							+icon('burger','header_icon')
+							ul.header_menu_list
+								- var header_menu_item = ["Главная", "Каталог", "Оплата и доставка", "Где купить", "Блог", "О нас ", "Контакты"]
+									each item in header_menu_item
+										li.header_menu_item: a(class="header_menu_link" href="#")= item
+						.header_active
+							.header_like
+								button.heaher_like_btn.header_active_item
+									+icon('heart-empty','header_active_icon')
+									span 99
+							.header_cart
+								button.header_cart_btn.header_active_item
+									+icon('cart','header_active_icon')
+									span 12
+									
+
+mixin aside
+	aside.aside
+		.aside_menu
+			.aside_menu_title Каталог
+				+icon('burger','aside_icon')
+			ul.aside_menu_cats
+				li.aside_menu_item: a(class="aside_menu_link" href="#") Новинки	
+				li.aside_menu_item: a(class="aside_menu_link" href="#") Популярные
+				li.aside_menu_item: a(class="aside_menu_link" href="#") Распродажа
+				li.aside_menu_item: a(class="aside_menu_link" href="#") Наши книги
+					+icon('angle-right','aside_icon')
+					ul.aside_menu_subcats
+							- var aside_menu_subitem= ["0-3 года", "4-6 лет", "7+ лет", "English books"]
+								each item in aside_menu_subitem
+									li.aside_menu_subitem: a(class="aside_menu_sublink" href="#")= item
+				li.aside_menu_item: a(class="aside_menu_link" href="#") Игрушки
+					+icon('angle-right','aside_icon')
+					ul.aside_menu_subcats
+						- var aside_menu_subitem= ["Для мальчиков", "Для девочек", "Для малышей", "Развивающие", "Интерактивные", "Конструкторы", "Мягкие игрушки"]
+							each item in aside_menu_subitem
+								li.aside_menu_subitem: a(class="aside_menu_sublink" href="#")= item
+mixin footer
+	footer.footer
+		.section_in
+			.footer_in
+				.footer_top
+					.footer_col.links_mod
+						ul.footer_links
+							- var footer_links_item = ["О нас", "Каталог", "Полезные статьи", "Личный кабинет", "Оплата и доставка", "Как сделать заказ", "Гарантия", "Возврат и обмен", "Контакты", "Где купить", "Отзывы"]
+										each item in footer_links_item
+											li.footer_links_item: a(class="footer_links_l" href="#")= item
+					.footer_col
+						.footer_socials_w
+							.footer_socials_title Присоединяйтесь:
+							.footer_socials
+								a(class="footer_socials_link fb-mod" href="#")
+									+icon('fb','footer_socials_icon')
+								a(class="footer_socials_link inst-mod" href="#")
+									+icon('inst','footer_socials_icon')
+								a(class="footer_socials_link vk-mod" href="#")
+									+icon('vk','footer_socials_icon')
+						.footer_pays_w
+							.footer_pays_title Мы принимаем:
+							.footer_pays
+								img.footer_pays_img(height="30" src="i/mc.png")
+								img.footer_pays_img(height="30" src="i/visa.png")
+								img.footer_pays_img(height="30" src="i/pb.png")
+					.footer_col
+						.footer_form
+							.footer_form_title Остались вопросы?
+								p Заполните форму!
+							form.cont_form(action="#")
+								input.cont_form_input.name_mod(type="text" placeholder="Имя")
+								input.cont_form_input.tel_mod(type="tel" placeholder="Номер телефона")
+								input.cont_sub(type="submit" value="Отправить")
+					.footer_col
+						.footer_contacts
+							.footer_contacts_i
+								ul.footer_tels
+									li.footer_tels_item: a(class="footer_tels_link" href="tel:0800000000") 0 800 00 00 00
+									li.footer_tels_item: a(class="footer_tels_link" href="tel:0440000000") 044 000 00 00
+									li.footer_tels_item: a(class="footer_tels_link" href="tel:0930000000") 093 000 00 00
+							.footer_contacts_i
+								.footer_contacts_skype skype: mywhy.com
+							.footer_contacts_i
+								a(class="footer_contacts_mail" href="mailto:support@mywhy.com") support@mywhy.com
+							.footer_contacts_i
+								.schedule Пн-Пт: 9:00-19:00
+									br 
+									| Сб: 10:00-18:00
+									br 
+									| Вс - выходной
+				.footer_bottom
+					img.footer_logo(height="60" width="75" src="i/logo.png")
+					.footer_copy © 2020 MyWhy.com  Все права защищены

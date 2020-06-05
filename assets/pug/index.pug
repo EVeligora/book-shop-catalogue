@@ -1,0 +1,70 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Книжный магазин  - MyWhy'}
+block content_block
+	//- section.section.demo_mod
+	//- 	h1.section_title Hola #[a.test(href='#') Maketodor] :)
+	section.content
+		.main_title_w
+			h1.main_title Наши книги
+		.sort_main_w
+			.sort_main
+				.sort_show_w
+					.sort_show_title Показать:
+					.sort_show
+						.sort_show_item.active Популярные товары
+						.sort_show_item Рекомендуемые товары
+						.sort_show_item Новинки
+				.sort_select_w
+					.sort_select
+						.sort_select_title Сортировка по:
+						.sort_select_btn популярности 
+							+icon('angle-right','sort_icon')
+						ul.sort_select_list
+							li.sort_select_item популярности
+							li.sort_select_item рейтингу
+							li.sort_select_item цене
+							li.sort_select_item дате выпуска
+				.sort_view
+					.sort_view_btn.large_mod.active
+						+icon('th-large','sort_icon')
+					.sort_view_btn.list_mod
+						+icon('th-list','sort_icon')
+		.catalog_w
+			.catalog
+				- for (var x = 0; x < 21; x++)
+					.book_item_w
+						.book_item
+							.book_item_active
+								+icon('heart','book_item_like')
+								span.book_item_new New
+								span.book_item_top top
+								span.book_item_discount -25%
+							img(src="i/abetka_new.jpg" class="book_item_img")
+							.book_item_rating
+								.book_rating
+									+icon('star','rating_icon_full')
+									+icon('star','rating_icon_full')
+									+icon('star','rating_icon_full')
+									+icon('star','rating_icon_full')
+									+icon('star','rating_icon_empty')
+							
+							h2.book_item_title Абетка
+							.book_item_prise
+								.book_item_prise-old 149
+								.book_item_prise-new 120 грн
+							.book_item_cart
+								span.book_item_cart_text В корзину
+									+icon('cart','book_item_cart')
+			.pagination_w
+				nav.pagination
+					a(href="#" class="pagination_link prev_mod")
+						+icon('angle-right','pagination_prev_icon')
+					a(href="#" class="pagination_link active") 1
+					a(href="#" class="pagination_link") 2
+					a(href="#" class="pagination_link") 3
+					a(href="#" class="pagination_link next_mod")
+						+icon('angle-right','pagination_next_icon')
+
+

@@ -1,0 +1,321 @@
+//------------------------------------------------------------layout
+// .header {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+
+// 	height: $height_header;
+// 	width: 100%;
+
+// 	font-size: 1rem;
+
+// 	will-change: transform;
+
+// 	@include z-index(header);
+// }
+
+//------------------------------------------------------------layout###
+
+.header_in {
+	display: flex;
+	flex-direction: row;
+	padding-top: 3rem;
+	margin-bottom: 6rem;
+}
+
+.header_logo_w {
+	margin-right: 8rem;
+}
+
+.header_logo {
+	height: 12rem;
+	width: 15rem;
+	position: relative;
+
+	span {
+		position: absolute;
+		text-transform: uppercase;
+		white-space: nowrap;
+		bottom: 0;
+		left: 1.4em;
+		font-size: 0.68em;
+		font-weight: 600;
+		font-stretch: condensed;
+		color: $gr;
+	}
+}
+
+.header_logo_img {
+	height: 12rem;
+	width: auto;
+}
+
+.header_main {
+	width: 100%;
+}
+
+.header_main_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3.5rem;
+	margin-bottom: 3.8rem;
+}
+
+.header_tels_w {
+	margin-right: auto;
+}
+
+.header_tels_main {
+	position: relative;
+	line-height: 2.5rem;
+	font-size: 1.4rem;
+	cursor: pointer;
+
+	&.active {
+		.icon-angle-right.header_tels_icon {
+			transform: rotate(270deg);
+		}
+	}
+}
+
+.header_tels_content {
+	padding-left: 3.5rem;
+	padding-right: 2rem;
+	font-size: 1.4rem;
+
+}
+
+.icon-telephone.header_tels_icon {
+	position: absolute;
+	font-size: 2.5rem;
+	fill: $gr;
+}
+
+.header_tels {
+	display: none;
+	position: absolute;
+	background: #fff;
+	top: 3rem;
+	right: 0;
+	left: 0;
+	text-align: center;
+	// background: $yel;
+	border: .2rem dashed $gr;
+	border-radius: 1rem;
+	padding: 1rem 0;
+
+}
+
+.tels_item_link {
+	color: $text;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.icon-angle-right.header_tels_icon {
+	position: absolute;
+	font-size: 1rem;
+	height: 2.5rem;
+	top: 0;
+	right: .5rem;
+	transform: rotate(90deg);
+	transition: .35s;
+}
+
+.header_search {
+	margin-right: 3rem;
+}
+
+.search_form {
+	position: relative;
+}
+
+.search_form_inp {
+	width: 22.5rem;
+	font-size: 1.2rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	border: .1rem dashed #b2b2b2;
+	outline: inherit;
+	padding-left: 1.2rem;
+	border-radius: 1rem;
+
+	&::placeholder {
+		color: #828388;
+	}
+}
+
+.search_form_btn {
+	position: absolute;
+	right: 0;
+	width: 5rem;
+	height: 3.5rem;
+	border-radius: 0 1rem 1rem 0;
+	background-color: $pink;
+	cursor: pointer;
+}
+
+.icon-search.search_btn_icon {
+	font-size: 2rem;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+
+.header_enter_w {
+	margin-right: 4rem;
+
+}
+
+.header_enter {
+	display: flex;
+	align-items: center;
+}
+
+.header_enter_bts {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+}
+
+.icon-login.header_enter_icon {
+	font-size: 2.6rem;
+	color: $pink;
+	margin-right: 1rem;
+}
+
+.header_login,
+.header_register,
+.lang_select {
+	font-size: 1.3rem;
+	cursor: pointer;
+
+}
+
+.lang_select {
+	position: relative;
+	border: none;
+	color: $text;
+	&.active {
+		.icon-angle-right.lang_icon {
+			transform: rotate(270deg);
+		}
+	}
+}
+
+.lang_select_inner {
+	position: absolute;
+	border: 0.2rem dashed $gr;
+	z-index: 99;
+	background: #fff;
+	top: 2.5rem;
+	padding: 1rem;
+	right: 0;
+	border-radius: 0.5rem;
+	display: none;
+
+}
+
+.lang_select_item:hover {
+	color: $gr;
+}
+
+.icon-angle-right.lang_icon {
+	font-size: 1rem;
+	transform: rotate(90deg);
+	transition: .35s;
+}
+
+.header_main_bottom {
+	display: flex;
+	align-items: center;
+	height: 6.5rem;
+}
+
+.header_menu {
+	margin-left: -1rem;
+}
+.icon-burger.header_icon{
+	display: none;
+	font-size: 4rem;
+}
+.header_menu_list {
+	display: flex;
+}
+
+.header_menu_item {
+	height: 3rem;
+	box-sizing: border-box;
+	display: block;
+}
+
+.header_menu_link {
+	box-sizing: border-box;
+	white-space: nowrap;
+	display: block;
+	line-height: 3rem;
+	padding: 0 1.8rem;
+	transition: .35s;
+	font-size: 1.6rem;
+	border: .2rem dashed rgba(0, 0, 0, 0);
+
+
+	&:hover {
+		border: .2rem dashed $gr;
+		color: $text;
+		border-radius: 1rem;
+	}
+}
+
+.icon.header_active_icon {
+	font-size: 3.5rem;
+
+}
+
+.header_active {
+	margin-left: auto;
+	display: flex;
+
+	div+div {
+		margin-left: 3rem;
+	}
+}
+
+.header_active_item {
+	height: 6.5rem;
+	width: 7rem;
+	border: .2rem dashed $gr;
+	border-radius: 1rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .35s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f6fae5;
+	}
+
+	span {
+		font-size: 1rem;
+		border-radius: 50%;
+		height: 2rem;
+		width: 2rem;
+		line-height: 2rem;
+		white-space: nowrap;
+		background-color: $pink;
+		color: #fff;
+		position: absolute;
+		top: .8rem;
+		right: .6rem;
+	}
+}

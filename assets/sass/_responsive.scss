@@ -1,0 +1,132 @@
+@media (max-width:1200px) {
+	html {
+		font: 400 calc(100vw / 1200 * 10)/1.33 $font_1;
+	}
+
+}
+
+@media (max-width:1024px) {
+
+	.header_logo_w,
+	.aside {
+		display: none;
+	}
+
+	.content {
+		margin: 0;
+	}
+}
+
+@media (max-width:768px) {
+	html {
+		font: 400 calc(100vw / 600 * 10)/1.33 $font_1;
+	}
+
+	.section_in {
+		max-width: 57rem;
+	}
+
+	.header_in {
+		margin-bottom: 2rem;
+	}
+
+	.header_tels_w,
+	.sort_show_w {
+		display: none;
+	}
+
+	.book_item_w {
+		position: relative;
+		width: calc(50% - 2.5rem);
+		margin: 0 1.25rem 2.5rem;
+	}
+
+	.header_search,
+	.header_enter_w {
+		margin: 0;
+	}
+
+	.header_login,
+	.header_register,
+	.lang_select {
+		font-size: 1.8rem;
+		line-height: 3rem;
+	}
+
+	.lang_select {
+		line-height: 3.5rem;
+	}
+
+	.icon-burger.header_icon {
+		display: block;
+	}
+
+	.header_menu {
+		margin: 0;
+	}
+
+	.header_menu_list {
+		position: absolute;
+		flex-direction: column;
+		background-color: #fff;
+		border: 0.2rem dashed $gr;
+		z-index: 99;
+		border-radius: 0.5rem;
+		display: none;
+		padding: 1rem;
+	}
+
+	.header_menu_link:hover {
+		border: 0.2rem dashed #fff;
+		color: $gr;
+	}
+
+
+	.footer_top {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer_col.links_mod {
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer_links {
+		height: auto;
+	}
+
+	.footer_col+.footer_col {
+		margin-top: 2rem;
+	}
+
+	.footer_contacts {
+		text-align: center;
+	}
+
+}
+
+@media (max-width:480px) {
+	html {
+		font: 400 calc(100vw / 480 * 10)/1.33 $font_1;
+	}
+
+	.section_in {
+		max-width: 45rem;
+	}
+
+}
+
+@media (max-width:420px) {
+    .footer_links_l,
+    .footer_contacts,
+    .footer_tels_link,
+    .footer_socials_title,
+    .footer_pays_title,
+    .schedule,
+    .footer_copy,
+    .footer_form_title p {
+        font-size: 1.8rem;
+        line-height: 3rem;
+	}
+}
