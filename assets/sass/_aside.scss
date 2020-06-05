@@ -1,6 +1,8 @@
 .aside {
-	float: left;
+	// float: left;
 	width: 20rem;
+	margin-right: 3rem;
+	width: 100%;
 }
 
 .aside_menu {
@@ -29,6 +31,8 @@
 
 .aside_menu_cats {
 	padding: 2rem 2.5rem 3.5rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .aside_menu_item {
