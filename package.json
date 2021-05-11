@@ -28,6 +28,7 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^7.0.0",
+    "postcss": "^8.2.15",
     "postcss-assets": "^5.0.0",
     "postcss-reporter": "^7.0.2",
     "postcss-scss": "^3.0.5",
