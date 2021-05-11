@@ -28,13 +28,19 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^7.0.0",
+    "is-svg": "^4.3.1",
+    "lodash.template": "^4.5.0",
+    "mem": "^8.1.1",
+    "node-notifier": "^9.0.1",
     "postcss": "^8.2.15",
     "postcss-assets": "^5.0.0",
     "postcss-reporter": "^7.0.2",
     "postcss-scss": "^3.0.5",
+    "pug": "^3.0.2",
     "rimraf": "^2.6.3",
     "stylelint": "^13.13.1",
-    "underscore": "^1.13.1"
+    "underscore": "^1.13.1",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {},
   "scripts": {
