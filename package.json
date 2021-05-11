@@ -32,7 +32,8 @@
     "postcss-reporter": "^7.0.2",
     "postcss-scss": "^3.0.5",
     "rimraf": "^2.6.3",
-    "stylelint": "^13.13.1"
+    "stylelint": "^13.13.1",
+    "underscore": "^1.13.1"
   },
   "devDependencies": {},
   "scripts": {
